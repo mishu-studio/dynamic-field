@@ -11,10 +11,10 @@ interface DynamicFieldDisplayProps {
 const DynamicFieldDisplay: React.FC<DynamicFieldDisplayProps> = ({ dynamicFields }) => {
   return (
     <>
-      {dynamicFields.map((field) => {
+      {dynamicFields.map((field, index) => {
         const { type, options, placeholder, required, className, style, label } = field
 
-        const component = () => {
+        const renderComponent = () => {
           switch (type) {
             case 'number': {
               return (
@@ -33,7 +33,7 @@ const DynamicFieldDisplay: React.FC<DynamicFieldDisplayProps> = ({ dynamicFields
             case 'select': {
               return (
                 <Select required={required}>
-                  <SelectTrigger asChild>
+                  <SelectTrigger>
                     <SelectValue placeholder={placeholder} />
                   </SelectTrigger>
                   <SelectContent>
@@ -56,12 +56,13 @@ const DynamicFieldDisplay: React.FC<DynamicFieldDisplayProps> = ({ dynamicFields
         }
 
         return (
-          <>
-            <form>
-              <Label>{label}</Label>
-              {component()}
-            </form>
-          </>
+          <div
+            key={index}
+            className='field-container'
+          >
+            <Label>{label}</Label>
+            {renderComponent()}
+          </div>
         )
       })}
     </>
