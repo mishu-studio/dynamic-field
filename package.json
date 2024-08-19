@@ -1,6 +1,6 @@
 {
   "name": "@mishu-studio/dynamic-shadix",
-  "version": "1.0.3",
+  "version": "1.1.10",
   "description": "dynamic-field-ui-library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,8 +11,18 @@
   "author": "Harith Iqbal",
   "license": "MIT",
   "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-select": "^2.1.1",
+    "@radix-ui/react-slot": "^1.1.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.428.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.52.2",
+    "tailwind-merge": "^2.5.2",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
@@ -21,7 +31,10 @@
     "@semantic-release/npm": "^12.0.1",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.41",
     "semantic-release": "^24.1.0",
+    "tailwindcss": "^3.4.10",
     "typescript": "^5.5.4"
   }
 }
