@@ -4,6 +4,7 @@ interface CommonFieldProps {
   className?: string
   placeholder?: string
   label: string
+  name: string
 }
 
 interface TextFieldOptions {
